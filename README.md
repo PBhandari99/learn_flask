@@ -1,8 +1,10 @@
-To run the server first install pipenv
-`$ pip install pipenv`
+To run the server first install pipenv:
+`pip install pipenv`
 
 To install the module:
 
-run this command from the directory: `pipenv install`
+run this command from the directory: 
+`pipenv install`
 
-
+The link to the Package mangener `pipenv`:
+* *[pipenv](https://docs.pipenv.org/)
