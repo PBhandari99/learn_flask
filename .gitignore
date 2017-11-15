@@ -7,6 +7,17 @@ __pycache__/
 *.so
 
 *uploads
+*test
+*.gz
+.DS_Store
+.DS_Store?
+*.o
+*.obj
+*.out
+*.swp
+*.swo
+*.png
+
 # Distribution / packaging
 .Python
 env/
