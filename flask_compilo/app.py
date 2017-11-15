@@ -1,8 +1,9 @@
 import os
-import subprocess
 #  import tarfile
-from flask import Flask, request, redirect
+from flask import Flask, request, redirect, jsonify
 from werkzeug.utils import secure_filename
+
+from  compiler.compiler import *
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = set(['pdf', 'tar', '.cpp', 'cc', '.h', '.hpp'])
@@ -41,11 +42,9 @@ def submit_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        return filename + ' upload successful'
-
+        return jsonify(status="uploaded")
 
 #  def unzip_tar_file(file_to_unzip):
     #  tar = tarfile.open(file_to_unzip)
     #  tar.extractall('./uploads/extracts')
     #  tar.close()
-    
