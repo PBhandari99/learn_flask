@@ -17,6 +17,9 @@ __pycache__/
 *.swp
 *.swo
 *.png
+*.db
+db_test.py
+index_db.html
 
 # Distribution / packaging
 .Python
